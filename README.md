@@ -24,5 +24,3 @@ Updates: 1)
 
 
 Screenshots:
-
-![fav](https://user-images.githubusercontent.com/59315081/155868718-cef6b669-6fd9-4efe-ad94-053dffb6e6ef.png)
