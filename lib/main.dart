@@ -6,11 +6,16 @@ void main() => runApp( const MaterialApp(
 home:Home(),
 ));
 
-class Home extends StatelessWidget {
+class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
 
+  @override
+  State<Home> createState() => _HomeState();
+}
 
+class _HomeState extends State<Home> {
 
+int level = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,6 +25,15 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.grey[850],
         elevation: 0.0,
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: (){
+          setState(() {
+            level += 1;
+          });
+        },
+        child: Icon(Icons.add),
+        backgroundColor: Colors.grey[800],
       ),
       body: Padding(
          padding: const EdgeInsets.fromLTRB(30.0, 40.0, 30.0, 0.0),
@@ -55,7 +69,7 @@ class Home extends StatelessWidget {
             ),
             const SizedBox(height: 30.0),
             const Text(
-              'Course',
+              'level',
               style: TextStyle(
                 color: Colors.blueGrey,
                 letterSpacing: 2.0,
@@ -63,8 +77,8 @@ class Home extends StatelessWidget {
             ),
 
             const SizedBox(height: 10.0),
-            const Text(
-              'Computer',
+             Text(
+              '$level',
               style: TextStyle(
                 color: Colors.lightBlueAccent,
                 letterSpacing: 2.0,
@@ -115,3 +129,5 @@ class Home extends StatelessWidget {
     );
   }
 }
+
+
