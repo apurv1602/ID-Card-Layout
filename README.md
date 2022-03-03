@@ -17,10 +17,9 @@ samples, guidance on mobile development, and a full API reference.
 
 
 
-Version 1.0.1
+Version 2.0
 
-Updates: 1)
-2)
+Updates: 1)Add ststeull widget and set counter on level.
 
 
 Screenshots:
